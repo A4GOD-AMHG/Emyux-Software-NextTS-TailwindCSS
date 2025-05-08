@@ -1,15 +1,14 @@
 {
-    "Footer": {
-        "copyright": "Creado por Emyux AI. © {year} Todos los derechos reservados",
-        "address": "",
-        "location": ""
-    },
     "LocaleSwitcher": {
         "label": "Cambiar idioma",
         "locale": {
             "en": "EN",
             "es": "ES"
         }
+    },
+    "ThemeSwitcher": {
+        "title": "Toggle theme",
+        "aria": "Toggle theme"
     },
     "RootLayout": {
         "title": "Emyux Software - Soluciones Tecnológicas a Medida",
@@ -59,5 +58,24 @@
                 "submit": "Enviar Mensaje"
             }
         }
+    },
+    "Footer": {
+        "contact": {
+            "title": "Contact Us",
+            "phone": "Phone"
+        },
+        "legal": {
+            "title": "Legal",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "cookies": "Cookies Policy"
+        },
+        "quote": {
+            "quote": "We transform complex problems into elegant solutions, one algorithm at a time",
+            "title": "Innovation Driven",
+            "subtitle": "Automating your digital future"
+        },
+        "copyright": "All rights reserved",
+        "locale": "en"
     }
 }

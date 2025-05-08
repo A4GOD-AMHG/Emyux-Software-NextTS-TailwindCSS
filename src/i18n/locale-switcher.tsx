@@ -10,9 +10,15 @@ export default function LocaleSwitcher() {
 
     return (
         <LocaleSwitcherSelect label={t('label')} defaultLocale={locale}>
-            {locales.map((locale) => (
-                <option key={locale} title={locale} value={locale}>
-                    {t(`locale.${locale}`)}
+            {locales.map((loc) => (
+                <option key={loc}
+                    className={`dark:text-gray-900 cursor-pointer ${loc === locale
+                        ? 'text-gray-900 bg-white dark:text-white dark:bg-gray-900'
+                        : 'text-gray-900 bg-white dark:text-white dark:bg-gray-900 hover:bg-gray-800 hover:dark:bg-gray-200'
+                        }`}
+                    title={loc}
+                    value={loc}>
+                    {t(`locale.${loc}`).toUpperCase()}
                 </option>
             ))}
         </LocaleSwitcherSelect>

@@ -1,22 +1,19 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Dialog } from '@headlessui/react'
 import { FiX } from 'react-icons/fi'
 
-// Esquema de validación
+// Esquema de validación actualizado
 const formSchema = z.object({
     name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
     email: z.string().email('Ingresa un correo electrónico válido'),
     projectType: z.enum(['MOBILE_APP', 'WEBSITE', 'DEV_OPS', 'DESKTOP_APP', 'OTHER'], {
         required_error: 'Selecciona un tipo de proyecto',
-    }),
-    budget: z.enum(['LESS_5K', '5K-15K', '15K-50K', 'MORE_50K'], {
-        required_error: 'Selecciona un rango de presupuesto',
     }),
     timeline: z.enum(['URGENT', '1-3_MONTHS', '3-6_MONTHS', 'FLEXIBLE'], {
         required_error: 'Selecciona un plazo estimado',
@@ -30,15 +27,22 @@ export default function ContactModal() {
     const [isOpen, setIsOpen] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitSuccess, setSubmitSuccess] = useState(false)
+    const [charCount, setCharCount] = useState(0)
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>({
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<FormValues>({
         resolver: zodResolver(formSchema)
     })
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const description = watch('description', '')
+
+    useEffect(() => {
+        setCharCount(description.length)
+    }, [description])
+
     const onSubmit = async (data: FormValues) => {
         setIsSubmitting(true)
         try {
+            console.log(data)
             // Simular envío a API
             await new Promise(resolve => setTimeout(resolve, 2000))
             setSubmitSuccess(true)
@@ -65,87 +69,76 @@ export default function ContactModal() {
                     <Dialog.Panel as={motion.div}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl p-6"
+                        className="w-full max-w-2xl bg-white dark:bg-gray-900 rounded-2xl p-8"
                     >
-                        <div className="flex justify-between items-center mb-4">
-                            <Dialog.Title className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                        <div className="flex justify-between items-center mb-6">
+                            <Dialog.Title className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                                 {submitSuccess ? '¡Gracias!' : 'Cuéntanos tu proyecto'}
                             </Dialog.Title>
-                            <button title='Toggle' onClick={() => setIsOpen(false)}>
+                            <button
+                                title='Cerrar modal'
+                                onClick={() => setIsOpen(false)}
+                                className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            >
                                 <FiX className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                             </button>
                         </div>
 
                         {!submitSuccess ? (
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                                <div>
-                                    <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
-                                        Nombre completo
-                                    </label>
-                                    <input
-                                        {...register('name')}
-                                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-                                        placeholder="Ej: María González"
-                                    />
-                                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
-                                        Correo electrónico
-                                    </label>
-                                    <input
-                                        type="email"
-                                        {...register('email')}
-                                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-                                        placeholder="ejemplo@empresa.com"
-                                    />
-                                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
-                                        Tipo de proyecto
-                                    </label>
-                                    <select
-                                        {...register('projectType')}
-                                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-                                    >
-                                        <option value="">Selecciona una opción</option>
-                                        <option value="MOBILE_APP">Aplicación Móvil</option>
-                                        <option value="WEBSITE">Sitio Web/Landing Page</option>
-                                        <option value="DESKTOP_APP">Aplicación de Escritorio</option>
-                                        <option value="DEV_OPS">Infraestructura/DevOps</option>
-                                        <option value="OTHER">Otro</option>
-                                    </select>
-                                    {errors.projectType && <p className="text-red-500 text-sm mt-1">{errors.projectType.message}</p>}
-                                </div>
-
-                                <div className="grid grid-cols-2 gap-4">
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
-                                        <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
-                                            Presupuesto aproximado
+                                        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+                                            Nombre completo
                                         </label>
-                                        <select
-                                            {...register('budget')}
-                                            className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-                                        >
-                                            <option value="">Rango de presupuesto</option>
-                                            <option value="LESS_5K">Menos de 5.000€</option>
-                                            <option value="5K-15K">5.000€ - 15.000€</option>
-                                            <option value="15K-50K">15.000€ - 50.000€</option>
-                                            <option value="MORE_50K">Más de 50.000€</option>
-                                        </select>
-                                        {errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget.message}</p>}
+                                        <input
+                                            {...register('name')}
+                                            className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                                            placeholder="Ej: María González"
+                                        />
+                                        {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
+                                        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+                                            Correo electrónico
+                                        </label>
+                                        <input
+                                            type="email"
+                                            {...register('email')}
+                                            className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                                            placeholder="ejemplo@empresa.com"
+                                        />
+                                        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
+                                            Tipo de proyecto
+                                        </label>
+                                        <select
+                                            {...register('projectType')}
+                                            className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                                        >
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="MOBILE_APP">Aplicación Móvil</option>
+                                            <option value="WEBSITE">Sitio Web/Landing Page</option>
+                                            <option value="DESKTOP_APP">Aplicación de Escritorio</option>
+                                            <option value="DEV_OPS">Infraestructura/DevOps</option>
+                                            <option value="OTHER">Otro</option>
+                                        </select>
+                                        {errors.projectType && <p className="text-red-500 text-sm mt-1">{errors.projectType.message}</p>}
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                                             Plazo estimado
                                         </label>
                                         <select
                                             {...register('timeline')}
-                                            className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                                            className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                                         >
                                             <option value="">Plazo de entrega</option>
                                             <option value="URGENT">Urgente (menos de 1 mes)</option>
@@ -158,33 +151,58 @@ export default function ContactModal() {
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
-                                        Describe tu proyecto
-                                    </label>
+                                    <div className="flex justify-between items-center mb-2">
+                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                                            Describe tu proyecto
+                                        </label>
+                                        <span className={`text-xs ${charCount < 20 ? 'text-red-500' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            {charCount}/20 caracteres
+                                        </span>
+                                    </div>
                                     <textarea
                                         {...register('description')}
-                                        rows={4}
-                                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
+                                        rows={6}
+                                        className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                                         placeholder="Ej: Necesito una aplicación móvil para gestión de pedidos con..."
                                     />
-                                    {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description.message}</p>}
+                                    {errors.description && (
+                                        <p className="text-red-500 text-sm mt-1">
+                                            {errors.description.message}
+                                        </p>
+                                    )}
                                 </div>
 
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors disabled:opacity-50 dark:bg-blue-500 dark:hover:bg-blue-600"
+                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-medium text-lg transition-colors disabled:opacity-50 dark:bg-blue-500 dark:hover:bg-blue-600"
                                 >
                                     {isSubmitting ? 'Enviando...' : 'Solicitar propuesta'}
                                 </button>
                             </form>
                         ) : (
-                            <div className="text-center py-8">
-                                <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                                    ¡Gracias por contactarnos! 🎉
-                                </p>
-                                <p className="text-gray-600 dark:text-gray-400">
-                                    Nuestro equipo te contactará en las próximas 24 horas.
+                            <div className="text-center py-12">
+                                <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-10 w-10 text-green-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                                    ¡Mensaje enviado con éxito!
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+                                    Hemos recibido tu información. Uno de nuestros especialistas se pondrá en contacto contigo en las próximas 24 horas.
                                 </p>
                             </div>
                         )}
