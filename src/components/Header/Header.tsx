@@ -1,11 +1,9 @@
 import { Link } from '@/i18n/navigation';
 import LocaleSwitcher from '@/i18n/locale-switcher';
-// import { useTranslations } from 'next-intl';
 import Logo from '@/components/Logo';
 import ThemeSwitcher from '@/theme/theme-switcher';
 
 export default async function Header() {
-    // const t = useTranslations('Header')
 
     return (
         <header className="sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 z-50">

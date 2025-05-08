@@ -17,7 +17,7 @@ const HeroImage = () => (
     >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-900/20 dark:to-purple-900/20 rounded-[40px] overflow-hidden backdrop-blur-sm">
             <Image
-                src="/images/bg.jpeg"
+                src="/images/bg.jpg"
                 alt="Desarrollo de software"
                 fill
                 className="object-cover scale-110"

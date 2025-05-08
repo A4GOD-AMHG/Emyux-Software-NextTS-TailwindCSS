@@ -30,14 +30,6 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>) {
   return { title: t('title'), description: t('description'), };
 }
 
-// openGraph: {
-//   type: 'website',
-//   locale: 'es_ES',
-//   url: 'https://software.emyux.com',
-//   title: 'Emyux Software',
-//   description: 'Transformamos tus ideas en soluciones digitales',
-// }
-
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
