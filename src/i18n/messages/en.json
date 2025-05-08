@@ -1,0 +1,63 @@
+{
+    "Footer": {
+        "copyright": "Creado por Emyux AI. © {year} Todos los derechos reservados",
+        "address": "",
+        "location": ""
+    },
+    "LocaleSwitcher": {
+        "label": "Cambiar idioma",
+        "locale": {
+            "en": "EN",
+            "es": "ES"
+        }
+    },
+    "RootLayout": {
+        "title": "Emyux Software - Soluciones Tecnológicas a Medida",
+        "description": "Desarrollo de software personalizado para empresas innovadoras",
+        "keywords": {
+            "1": "software personalizado",
+            "2": "desarrollo a medida",
+            "3": "aplicaciones empresariales"
+        }
+    },
+    "HomePage": {
+        "hero": {
+            "title": "Transforma tu negocio con <span>Growth Inteligente</span>",
+            "subtitle": "Potenciamos empresas con soluciones de IA y estrategias de marketing que generan resultados reales",
+            "button": "Comienza con nosotros ahora"
+        },
+        "about": {
+            "title": "¿Quiénes Somos?",
+            "heading": "Orivion: Expertos en Growth Estratégico",
+            "description": "Con más de 2 años de experiencia, hemos perfeccionado el arte de escalar negocios mediante:",
+            "items": [
+                "IA Predictiva",
+                "Automatización Inteligente",
+                "Estrategias Data-Driven",
+                "Optimización en Tiempo Real"
+            ]
+        },
+        "stats": {
+            "values": [
+                "28",
+                "95%",
+                "4.7/5"
+            ],
+            "labels": [
+                "Clientes",
+                "Satisfacción",
+                "Rating"
+            ]
+        },
+        "contact": {
+            "title": "Contáctanos",
+            "form": {
+                "namePlaceholder": "Nombre completo",
+                "emailPlaceholder": "Correo electrónico",
+                "phonePlaceholder": "Teléfono (opcional)",
+                "messagePlaceholder": "¿Cómo podemos ayudarte?",
+                "submit": "Enviar Mensaje"
+            }
+        }
+    }
+}
