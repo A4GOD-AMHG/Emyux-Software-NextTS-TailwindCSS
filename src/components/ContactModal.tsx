@@ -1,12 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import * as z from 'zod'
-import { Dialog } from '@headlessui/react'
-import { FiX } from 'react-icons/fi'
+import { motion } from 'framer-motion';
+import { useState, useEffect, ReactNode } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import { Dialog, DialogPanel } from '@headlessui/react';
+import { FiX } from 'react-icons/fi';
 
 // Esquema de validación actualizado
 const formSchema = z.object({
@@ -18,32 +18,35 @@ const formSchema = z.object({
     timeline: z.enum(['URGENT', '1-3_MONTHS', '3-6_MONTHS', 'FLEXIBLE'], {
         required_error: 'Selecciona un plazo estimado',
     }),
-    description: z.string().min(20, 'Describe tu proyecto con al menos 20 caracteres'),
-})
+    description: z.string().min(20, 'Describe tu proyecto con al menos 20 caracteres').max(250),
+});
 
 type FormValues = z.infer<typeof formSchema>
 
-export default function ContactModal() {
-    const [isOpen, setIsOpen] = useState(false)
-    const [isSubmitting, setIsSubmitting] = useState(false)
-    const [submitSuccess, setSubmitSuccess] = useState(false)
-    const [charCount, setCharCount] = useState(0)
+interface ContactModalProps {
+    trigger: ReactNode;
+}
+
+export default function ContactModal({ trigger }: ContactModalProps) {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+    const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
+    const [charsLeft, setCharsLeft] = useState(250);
 
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<FormValues>({
         resolver: zodResolver(formSchema)
     })
 
-    const description = watch('description', '')
+    const description = watch('description', '');
 
     useEffect(() => {
-        setCharCount(description.length)
-    }, [description])
+        setCharsLeft(250 - description.length);
+    }, [description]);
 
     const onSubmit = async (data: FormValues) => {
-        setIsSubmitting(true)
+        setIsSubmitting(true);
         try {
             console.log(data)
-            // Simular envío a API
             await new Promise(resolve => setTimeout(resolve, 2000))
             setSubmitSuccess(true)
             reset()
@@ -55,18 +58,14 @@ export default function ContactModal() {
 
     return (
         <>
-            <button
-                title='Toggle'
-                onClick={() => setIsOpen(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors dark:bg-blue-500 dark:hover:bg-blue-600"
-            >
-                Contactar
-            </button>
+            <div onClick={() => setIsOpen(true)} className="inline-block">
+                {trigger}
+            </div>
 
             <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
                 <div className="fixed inset-0 flex items-center justify-center p-4">
-                    <Dialog.Panel as={motion.div}
+                    <DialogPanel as={motion.div}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="w-full max-w-2xl bg-white dark:bg-gray-900 rounded-2xl p-8"
@@ -155,12 +154,13 @@ export default function ContactModal() {
                                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                                             Describe tu proyecto
                                         </label>
-                                        <span className={`text-xs ${charCount < 20 ? 'text-red-500' : 'text-gray-500 dark:text-gray-400'}`}>
-                                            {charCount}/20 caracteres
+                                        <span className={`text-sm ${charsLeft < 0 ? 'text-red-500' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            {charsLeft} caracteres restantes
                                         </span>
                                     </div>
                                     <textarea
                                         {...register('description')}
+                                        maxLength={250}
                                         rows={6}
                                         className="w-full px-4 py-3 border rounded-lg dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
                                         placeholder="Ej: Necesito una aplicación móvil para gestión de pedidos con..."
@@ -206,7 +206,7 @@ export default function ContactModal() {
                                 </p>
                             </div>
                         )}
-                    </Dialog.Panel>
+                    </DialogPanel>
                 </div>
             </Dialog>
         </>
