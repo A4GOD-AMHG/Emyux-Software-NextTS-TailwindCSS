@@ -6,21 +6,21 @@ import ContactModal from '@/components/ContactModal';
 
 const services = [
     {
-        icon: <FiCode className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
+        icon: <FiCode className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600 dark:text-blue-400" />,
         title: 'Software que Genera Resultados',
         description:
             'No vendemos código, vendemos soluciones que aumentan tus ingresos y reducen costos. Sistemas diseñados exclusivamente para hacer crecer TU negocio.',
         benefits: ['+30% eficiencia', 'ROI medible', 'Escalable'],
     },
     {
-        icon: <FiCpu className="w-8 h-8 text-purple-500 dark:text-purple-400" />,
+        icon: <FiCpu className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 dark:text-purple-400" />,
         title: 'Automatización que Transforma',
         description:
             'Elimina el trabajo repetitivo de tu equipo con sistemas inteligentes que trabajan 24/7 sin errores. Recupera hasta 15 horas semanales por empleado.',
         benefits: ['0 errores humanos', 'Procesos 5x más rápidos', 'Integración inmediata'],
     },
     {
-        icon: <FiDatabase className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
+        icon: <FiDatabase className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600 dark:text-blue-400" />,
         title: 'Sistemas que Impulsan',
         description:
             'ERP/CRM que realmente se adaptan a tus procesos. Olvídate de sistemas genéricos que no cumplen. Control total sobre cada aspecto de tu operación.',
@@ -49,7 +49,7 @@ export default function ServicesSection() {
                         Vendemos Resultados
                     </span>
                 </h2>
-                <p className="text-xl text-center text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
+                <p className="text-xl text-center text-gray-600 dark:text-white mb-12 max-w-3xl mx-auto">
                     Cada línea de código está orientada a generar valor tangible para tu negocio
                 </p>
 
@@ -61,14 +61,14 @@ export default function ServicesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="flex flex-col p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-gray-100 dark:border-gray-700 h-full"
+                            className="flex flex-col p-8 bg-broken-gray dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition-all border border-gray-100 dark:border-gray-700 h-full"
                         >
-                            <div className="mb-6">
+                            <div className="mb-6 flex">
                                 {service.icon}
+                                <h3 className="ml-4 text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                                    {service.title}
+                                </h3>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                                {service.title}
-                            </h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
                                 {service.description}
                             </p>

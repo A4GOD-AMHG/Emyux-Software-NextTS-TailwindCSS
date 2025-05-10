@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 pt-10 md:pt-0 px-4 sm:px-6 lg:px-8">
+        <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-between gap-8 mb-16 sm:mb-0 md:gap-12 pt-10 md:pt-0 px-4 sm:px-6 lg:px-8">
             <div className="md:w-1/2 z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function HeroSection() {
                         aumentan sus ingresos. ¿Serás el próximo?
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                    <div className="flex flex-row gap-4 mb-12">
                         <ContactModal
                             trigger={
                                 <button
@@ -40,7 +40,7 @@ export default function HeroSection() {
                         />
 
                         <Link href="https://emyux.com/portfolio" passHref>
-                            <p className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
+                            <p className="flex items-center gap-2 px-6 py-3 text-gradient-to-r text-gray-900 dark:text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
                                 Ver portafolio <FiArrowRight />
                             </p>
                         </Link>
