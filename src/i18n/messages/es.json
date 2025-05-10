@@ -19,6 +19,174 @@
             "3": "aplicaciones empresariales"
         }
     },
+    "HeroSection": {
+        "title_part1": "Innovación Digital",
+        "title_part2": "Hecha a Tu Medida",
+        "subtext_highlight": "87% de nuestros clientes",
+        "subtext_rest": "aumentan sus ingresos. ¿Serás el próximo?",
+        "cta_contact": "Contactar",
+        "cta_portfolio": "Ver portafolio",
+        "achievements_title": "Lo que logran nuestros clientes:",
+        "achievements": {
+            "1": "Sistemas que ahorran tiempo y son más precisos",
+            "2": "Reducción de costos operativos",
+            "3": "Procesos automatizados en 2 semanas"
+        }
+    },
+    "ProblemsSection": {
+        "title": "¿Tu sistema limita el crecimiento de tu empresa?",
+        "subtext1": "Tal vez estés confiando en una solución que no se adapta a tus procesos.",
+        "subtext2": "Un software estandarizado puede funcionar al principio, pero acaba generando cuellos de botella y gastos innecesarios.",
+        "highlight": "Rescatamos y optimizamos tus sistemas para que tu inversión rinda al máximo.",
+        "problems": {
+            "1": {
+                "title": "Ineficiencias Operativas",
+                "desc": "Automatizamos procesos repetitivos para ahorrar tiempo y costos."
+            },
+            "2": {
+                "title": "Falta de Integración",
+                "desc": "Centralizamos herramientas y sistemas para optimizar el flujo de información."
+            },
+            "3": {
+                "title": "Procesos Desactualizados",
+                "desc": "Modernizamos tu infraestructura con soluciones adaptadas a tus necesidades."
+            },
+            "4": {
+                "title": "Soporte Insuficiente",
+                "desc": "Aseguramos el rendimiento con monitoreo y actualizaciones continuas."
+            }
+        }
+    },
+    "ServicesSection": {
+        "title_part1": "No Vendemos Código,",
+        "title_part2": "Vendemos Resultados",
+        "subtitle": "Cada línea de código está orientada a generar valor tangible para tu negocio",
+        "cta": "Contactar",
+        "services": {
+            "1": {
+                "title": "Software que Genera Resultados",
+                "description": "No vendemos código, vendemos soluciones que aumentan tus ingresos y reducen costos. Sistemas diseñados exclusivamente para hacer crecer TU negocio.",
+                "benefits": {
+                    "1": "+30% eficiencia",
+                    "2": "ROI medible",
+                    "3": "Escalable"
+                }
+            },
+            "2": {
+                "title": "Automatización que Transforma",
+                "description": "Elimina el trabajo repetitivo de tu equipo con sistemas inteligentes que trabajan 24/7 sin errores. Recupera hasta 15 horas semanales por empleado.",
+                "benefits": {
+                    "1": "0 errores humanos",
+                    "2": "Procesos 5x más rápidos",
+                    "3": "Integración inmediata"
+                }
+            },
+            "3": {
+                "title": "Sistemas que Impulsan",
+                "description": "ERP/CRM que realmente se adaptan a tus procesos. Olvídate de sistemas genéricos que no cumplen. Control total sobre cada aspecto de tu operación.",
+                "benefits": {
+                    "1": "Ventas +40%",
+                    "2": "Clientes satisfechos",
+                    "3": "Toma decisiones con datos"
+                }
+            }
+        }
+    },
+    "TestimonialsSection": {
+        "title": "Lo que dicen nuestros clientes",
+        "testimonials": {
+            "1": {
+                "quote": "Lo mejor de Jose sin duda es la atención. Las automatizaciones es un mundo complejo, tener a alguien que ante cualquier error ese mismo día se pone a solventarlo...",
+                "name": "Niall Wilde",
+                "role": "CEO Estrategias.io",
+                "avatar": "/images/testimonials/testimonial1.avif"
+            },
+            "2": {
+                "quote": "José y el equipo de Emyux realizan un trabajo fantástico. Están siempre detrás de mi proyecto proponiendo cosas nuevas para escalar.",
+                "name": "Vicente Montes",
+                "role": "CEO ReseteaT",
+                "avatar": "/images/testimonials/testimonial2.avif"
+            },
+            "3": {
+                "quote": "Muy satisfecho con su servicio. Cumplieron todas mis expectativas y gracias a ellos estoy llevando de una forma mas ordenada mi negocio",
+                "name": "Ruscarparts",
+                "role": "Dueño de negocio",
+                "avatar": "/images/testimonials/testimonial3.avif"
+            },
+            "4": {
+                "quote": "Fantástico trabajo. José y el equipo de Emyux fueron muy atentos y precisos con mis tareas de automatización contables...",
+                "name": "Jesús Sepúlveda",
+                "role": "Agente Inmobiliario",
+                "avatar": "/images/testimonials/testimonial4.avif"
+            },
+            "5": {
+                "quote": "Estoy muy satisfecho con el servicio de Emyux. Automatizaron toda mi atención al cliente (lo cual me robaba mucho tiempo)...",
+                "name": "Fco Javier Templado",
+                "role": "CEO Escuela Javier T",
+                "avatar": "/images/testimonials/testimonial5.avif"
+            }
+        }
+    },
+    "ImprovedCTA": {
+        "title_part1": "¿Listo para la",
+        "title_highlight": "Transformación Digital",
+        "title_part2": "?",
+        "subtext": "Agenda tu consultoría gratuita hoy mismo y descubre cómo podemos llevar tu negocio al siguiente nivel",
+        "cta": "Hablar con un Experto",
+        "features": {
+            "1": "Sin compromisos",
+            "2": "Análisis personalizado",
+            "3": "Propuesta en 48h",
+            "4": "Garantía de satisfacción"
+        }
+    },
+    "ContactModal": {
+        "title": "Cuéntanos tu proyecto",
+        "success_title": "¡Gracias!",
+        "success_message": "Hemos recibido tu información. Uno de nuestros especialistas se pondrá en contacto contigo en las próximas 24 horas.",
+        "labels": {
+            "name": "Nombre completo",
+            "email": "Correo electrónico",
+            "project_type": "Tipo de proyecto",
+            "timeline": "Plazo estimado",
+            "description": "Describe tu proyecto"
+        },
+        "common": {
+            "close": "Cerrar"
+        },
+        "placeholders": {
+            "name": "Ej: María González",
+            "email": "ejemplo@empresa.com",
+            "project_type": "Selecciona una opción",
+            "timeline": "Plazo de entrega",
+            "description": "Ej: Necesito una aplicación móvil para gestión de pedidos con..."
+        },
+        "options": {
+            "project_types": {
+                "MOBILE_APP": "Aplicación Móvil",
+                "WEBSITE": "Sitio Web/Landing Page",
+                "DESKTOP_APP": "Aplicación de Escritorio",
+                "DEV_OPS": "Infraestructura/DevOps",
+                "OTHER": "Otro"
+            },
+            "timelines": {
+                "URGENT": "Urgente (menos de 1 mes)",
+                "1-3_MONTHS": "1-3 meses",
+                "3-6_MONTHS": "3-6 meses",
+                "FLEXIBLE": "Flexible"
+            }
+        },
+        "validation": {
+            "name": "El nombre debe tener al menos 2 caracteres",
+            "email": "Ingresa un correo electrónico válido",
+            "project_type": "Selecciona un tipo de proyecto",
+            "timeline": "Selecciona un plazo estimado",
+            "description": "Describe tu proyecto con al menos 20 caracteres"
+        },
+        "chars_left": "caracteres restantes",
+        "submit": "Solicitar propuesta",
+        "submitting": "Enviando..."
+    },
     "Footer": {
         "contact": {
             "title": "Contacto",

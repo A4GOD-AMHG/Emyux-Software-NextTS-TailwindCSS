@@ -5,8 +5,11 @@ import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 import ContactModal from '@/components/ContactModal';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
+    const t = useTranslations('HeroSection');
+
     return (
         <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-between gap-8 mb-16 sm:mb-0 md:gap-12 pt-10 md:pt-0 px-4 sm:px-6 lg:px-8">
             <div className="md:w-1/2 z-10">
@@ -16,15 +19,17 @@ export default function HeroSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6 leading-tight">
-                        Innovación Digital{' '}
-                        <span className="text-blue-600 dark:text-blue-400">Hecha a Tu Medida</span>
+                        {t('title_part1')}{' '}
+                        <span className="text-blue-600 dark:text-blue-400">
+                            {t('title_part2')}
+                        </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">
                         <span className="font-semibold text-blue-600 dark:text-blue-400">
-                            87% de nuestros clientes
+                            {t('subtext_highlight')}
                         </span>{' '}
-                        aumentan sus ingresos. ¿Serás el próximo?
+                        {t('subtext_rest')}
                     </p>
 
                     <div className="flex flex-row gap-4 mb-12">
@@ -34,14 +39,14 @@ export default function HeroSection() {
                                     title="Toggle"
                                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors dark:bg-blue-500 dark:hover:bg-blue-600"
                                 >
-                                    Contactar
+                                    {t('cta_contact')}
                                 </button>
                             }
                         />
 
                         <Link href="https://emyux.com/portfolio" passHref>
                             <p className="flex items-center gap-2 px-6 py-3 text-gradient-to-r text-gray-900 dark:text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
-                                Ver portafolio <FiArrowRight />
+                                {t('cta_portfolio')} <FiArrowRight />
                             </p>
                         </Link>
 
@@ -49,16 +54,12 @@ export default function HeroSection() {
 
                     <div className="bg-white dark:bg-gray-800/50 p-6 rounded-xl shadow-lg backdrop-blur-sm border border-gray-100 dark:border-gray-700">
                         <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-                            Lo que logran nuestros clientes:
+                            {t('achievements_title')}
                         </h3>
                         <ul className="space-y-2">
-                            {[
-                                'Sistemas que ahorran tiempo y son más precisos',
-                                'Reducción de costos operativos',
-                                'Procesos automatizados en 2 semanas',
-                            ].map((item, index) => (
+                            {Object.values(t.raw('achievements')).map((item, index) => (
                                 <li key={index} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                    <FiArrowRight className="text-green-500 w-5 h-5" /> {item}
+                                    <FiArrowRight className="text-green-500 w-5 h-5" /> {item as string}
                                 </li>
                             ))}
                         </ul>

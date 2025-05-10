@@ -1,24 +1,27 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { Testimonial, testimonials } from '@/lib/testimonials';
+import { useTranslations } from 'next-intl';
 
 const TestimonialsCarousel = dynamic(
     () => import('@/components/TestimonialsCarousel'),
 )
 
 export default function TestimonialsSection() {
+    const t = useTranslations('TestimonialsSection');
+    const testimonials = t.raw('testimonials');
+
     return (
         <section className="dark:bg-gray-950 w-full bg-white py-16">
             <div className="container relative mx-auto px-4 h-140 sm:h-100">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-500">
-                    Lo que dicen nuestros clientes
+                    {t('title')}
                 </h2>
 
                 <div id="testimonials-viewport" className="overflow-hidden">
                     <div className="flex">
-                        {testimonials.map((testimonial: Testimonial, idx) => (
+                        {Object.keys(testimonials).map((key) => (
                             <div
-                                key={idx}
+                                key={key}
                                 className="relative flex-0 min-w-full w-full h-140 sm:h-100"
                             >
                                 <div className="max-w-3xl mx-auto p-6">
@@ -26,19 +29,25 @@ export default function TestimonialsSection() {
                                         <div className="flex items-center mb-6">
                                             <div className="w-16 flex-shrink-0 aspect-square rounded-full overflow-hidden border-2 border-blue-600">
                                                 <Image
-                                                    src={testimonial.avatar}
-                                                    alt={testimonial.name}
+                                                    src={testimonials[key].avatar}
+                                                    alt={testimonials[key].name}
                                                     width={80}
                                                     height={80}
                                                     className="object-cover"
                                                 />
                                             </div>
                                             <div className="ml-4 flex-1 min-w-0">
-                                                <h3 className="text-gray-800 dark:text-white text-xl font-bold truncate">{testimonial.name}</h3>
-                                                <p className="text-gray-800 dark:text-white truncate">{testimonial.role}</p>
+                                                <h3 className="text-gray-800 dark:text-white text-xl font-bold truncate">
+                                                    {testimonials[key].name}
+                                                </h3>
+                                                <p className="text-gray-800 dark:text-white truncate">
+                                                    {testimonials[key].role}
+                                                </p>
                                             </div>
                                         </div>
-                                        <p className="text-gray-800 dark:text-white italic mb-4">{testimonial.quote}</p>
+                                        <p className="text-gray-800 dark:text-white italic mb-4">
+                                            {testimonials[key].quote}
+                                        </p>
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => (
                                                 <svg

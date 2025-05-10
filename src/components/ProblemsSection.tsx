@@ -1,9 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { FiZap, FiLink, FiClock, FiHeart } from 'react-icons/fi';
 
 export default function ProblemsSection() {
+    const t = useTranslations('ProblemsSection');
+    const problems = t.raw('problems');
+
+    const icons = [
+        { key: 'zap', element: <FiZap className="w-8 h-8 text-purple-500 dark:text-purple-400" /> },
+        { key: 'link', element: <FiLink className="w-8 h-8 text-blue-500 dark:text-blue-400" /> },
+        { key: 'clock', element: <FiClock className="w-8 h-8 text-green-500 dark:text-green-400" /> },
+        { key: 'heart', element: <FiHeart className="w-8 h-8 text-red-500 dark:text-red-400" /> }
+    ];
+
     return (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -14,56 +25,35 @@ export default function ProblemsSection() {
                 className="max-w-4xl mx-auto text-center mb-12"
             >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                    ¿Tu sistema limita el crecimiento de tu empresa?
+                    {t('title')}
                 </h2>
                 <p className="text-xl text-gray-800 dark:text-white">
-                    Tal vez estés confiando en una solución que no se adapta a tus procesos.
+                    {t('subtext1')}
                 </p>
                 <p className="text-xl text-gray-800 dark:text-white mt-4">
-                    Un software estandarizado puede funcionar al principio, pero acaba generando cuellos de botella y gastos innecesarios.
+                    {t('subtext2')}
                 </p>
                 <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold mt-6">
-                    Rescatamos y optimizamos tus sistemas para que tu inversión rinda al máximo.
+                    {t('highlight')}
                 </p>
             </motion.div>
 
             <div className="max-w-5xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {[
-                    {
-                        icon: <FiZap className="w-8 h-8 text-purple-500 dark:text-purple-400" />,
-                        title: 'Ineficiencias Operativas',
-                        desc: 'Automatizamos procesos repetitivos para ahorrar tiempo y costos.',
-                    },
-                    {
-                        icon: <FiLink className="w-8 h-8 text-blue-500 dark:text-blue-400" />,
-                        title: 'Falta de Integración',
-                        desc: 'Centralizamos herramientas y sistemas para optimizar el flujo de información.',
-                    },
-                    {
-                        icon: <FiClock className="w-8 h-8 text-green-500 dark:text-green-400" />,
-                        title: 'Procesos Desactualizados',
-                        desc: 'Modernizamos tu infraestructura con soluciones adaptadas a tus necesidades.',
-                    },
-                    {
-                        icon: <FiHeart className="w-8 h-8 text-red-500 dark:text-red-400" />,
-                        title: 'Soporte Insuficiente',
-                        desc: 'Aseguramos el rendimiento con monitoreo y actualizaciones continuas.',
-                    },
-                ].map((item, i) => (
+                {Object.keys(problems).map((key, i) => (
                     <motion.div
-                        key={i}
+                        key={key}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: i * 0.1 }}
                         className="bg-broken-gray dark:bg-gray-800 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
                     >
-                        <div className="mb-4">{item.icon}</div>
+                        <div className="mb-4" key={icons[i].key}>{icons[i].element}</div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                            {item.title}
+                            {problems[key].title}
                         </h3>
                         <p className="text-normal mt-2 text-gray-800 dark:text-white">
-                            {item.desc}
+                            {problems[key].desc}
                         </p>
                     </motion.div>
                 ))}

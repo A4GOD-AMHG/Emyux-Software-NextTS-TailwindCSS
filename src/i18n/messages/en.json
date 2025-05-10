@@ -19,6 +19,174 @@
             "3": "aplicaciones empresariales"
         }
     },
+    "HeroSection": {
+        "title_part1": "Digital Innovation",
+        "title_part2": "Made for You",
+        "subtext_highlight": "87% of our clients",
+        "subtext_rest": "increase their revenue. Will you be next?",
+        "cta_contact": "Contact",
+        "cta_portfolio": "View portfolio",
+        "achievements_title": "What our clients achieve:",
+        "achievements": {
+            "1": "Systems that save time and are more accurate",
+            "2": "Reduction in operational costs",
+            "3": "Processes automated in 2 weeks"
+        }
+    },
+    "ProblemsSection": {
+        "title": "Does your system limit your company's growth?",
+        "subtext1": "You might be relying on a solution that doesn't fit your processes.",
+        "subtext2": "Standardized software might work at first, but ends up creating bottlenecks and unnecessary expenses.",
+        "highlight": "We rescue and optimize your systems to maximize your investment return.",
+        "problems": {
+            "1": {
+                "title": "Operational Inefficiencies",
+                "desc": "We automate repetitive processes to save time and costs."
+            },
+            "2": {
+                "title": "Lack of Integration",
+                "desc": "We centralize tools and systems to optimize information flow."
+            },
+            "3": {
+                "title": "Outdated Processes",
+                "desc": "We modernize your infrastructure with tailored solutions."
+            },
+            "4": {
+                "title": "Insufficient Support",
+                "desc": "We ensure performance with continuous monitoring and updates."
+            }
+        }
+    },
+    "ServicesSection": {
+        "title_part1": "We Don't Sell Code,",
+        "title_part2": "We Sell Results",
+        "subtitle": "Every line of code is designed to generate tangible value for your business",
+        "cta": "Contact",
+        "services": {
+            "1": {
+                "title": "Results-Driven Software",
+                "description": "We don't sell code, we sell solutions that increase your revenue and reduce costs. Systems designed exclusively to grow YOUR business.",
+                "benefits": {
+                    "1": "+30% efficiency",
+                    "2": "Measurable ROI",
+                    "3": "Scalable"
+                }
+            },
+            "2": {
+                "title": "Transformative Automation",
+                "description": "Eliminate repetitive work from your team with intelligent systems that work 24/7 error-free. Recover up to 15 weekly hours per employee.",
+                "benefits": {
+                    "1": "0 human errors",
+                    "2": "5x faster processes",
+                    "3": "Immediate integration"
+                }
+            },
+            "3": {
+                "title": "Empowering Systems",
+                "description": "ERP/CRM that truly adapt to your processes. Forget generic systems that don't deliver. Full control over every aspect of your operation.",
+                "benefits": {
+                    "1": "+40% sales",
+                    "2": "Satisfied customers",
+                    "3": "Data-driven decisions"
+                }
+            }
+        }
+    },
+    "TestimonialsSection": {
+        "title": "What our clients say",
+        "testimonials": {
+            "1": {
+                "quote": "The best thing about Jose is undoubtedly his attention. Automations are a complex world, and having someone who solves any error the same day...",
+                "name": "Niall Wilde",
+                "role": "CEO Estrategias.io",
+                "avatar": "/images/testimonials/testimonial1.avif"
+            },
+            "2": {
+                "quote": "José and the Emyux team do fantastic work. They're always behind my project proposing new things to scale.",
+                "name": "Vicente Montes",
+                "role": "CEO ReseteaT",
+                "avatar": "/images/testimonials/testimonial2.avif"
+            },
+            "3": {
+                "quote": "Very satisfied with their service. They met all my expectations and thanks to them I'm running my business in a more organized way.",
+                "name": "Ruscarparts",
+                "role": "Business Owner",
+                "avatar": "/images/testimonials/testimonial3.avif"
+            },
+            "4": {
+                "quote": "Fantastic work. José and the Emyux team were very attentive and precise with my accounting automation tasks...",
+                "name": "Jesús Sepúlveda",
+                "role": "Real Estate Agent",
+                "avatar": "/images/testimonials/testimonial4.avif"
+            },
+            "5": {
+                "quote": "I'm very satisfied with Emyux's service. They automated all my customer service (which was taking up too much of my time)...",
+                "name": "Fco Javier Templado",
+                "role": "CEO Javier T School",
+                "avatar": "/images/testimonials/testimonial5.avif"
+            }
+        }
+    },
+    "ImprovedCTA": {
+        "title_part1": "Ready for",
+        "title_highlight": "Digital Transformation",
+        "title_part2": "?",
+        "subtext": "Schedule your free consultation today and discover how we can take your business to the next level",
+        "cta": "Talk with an Expert",
+        "features": {
+            "1": "No obligations",
+            "2": "Personalized analysis",
+            "3": "Proposal in 48h",
+            "4": "Satisfaction guarantee"
+        }
+    },
+    "ContactModal": {
+        "title": "Tell us about your project",
+        "success_title": "Thank you!",
+        "success_message": "We've received your information. One of our specialists will contact you within the next 24 hours.",
+        "labels": {
+            "name": "Full name",
+            "email": "Email address",
+            "project_type": "Project type",
+            "timeline": "Estimated timeline",
+            "description": "Project description"
+        },
+        "common": {
+            "close": "Close"
+        },
+        "placeholders": {
+            "name": "Ex: John Doe",
+            "email": "example@company.com",
+            "project_type": "Select an option",
+            "timeline": "Delivery timeline",
+            "description": "Ex: I need a mobile app for order management with..."
+        },
+        "options": {
+            "project_types": {
+                "MOBILE_APP": "Mobile App",
+                "WEBSITE": "Website/Landing Page",
+                "DESKTOP_APP": "Desktop Application",
+                "DEV_OPS": "Infrastructure/DevOps",
+                "OTHER": "Other"
+            },
+            "timelines": {
+                "URGENT": "Urgent (less than 1 month)",
+                "1-3_MONTHS": "1-3 months",
+                "3-6_MONTHS": "3-6 months",
+                "FLEXIBLE": "Flexible"
+            }
+        },
+        "validation": {
+            "name": "Name must be at least 2 characters",
+            "email": "Please enter a valid email address",
+            "project_type": "Please select a project type",
+            "timeline": "Please select a timeline",
+            "description": "Description must be at least 20 characters"
+        },
+        "chars_left": "characters left",
+        "submit": "Request proposal",
+        "submitting": "Submitting..."
+    },
     "Footer": {
         "contact": {
             "title": "Contact Us",
