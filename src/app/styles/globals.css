@@ -16,20 +16,3 @@ select {
     text-indent: 1px;
     text-overflow: '';
 }
-
-.embla__container {
-    backface-visibility: hidden;
-    display: flex;
-    touch-action: pan-y;
-}
-
-.embla__slide {
-    position: relative;
-    min-width: 0;
-}
-
-@media (min-width: 768px) {
-    .embla__slide {
-        padding: 0 0.5rem;
-    }
-}
