@@ -65,7 +65,7 @@ export default function ServicesSection() {
                                     </li>
                                 ))}
                             </ul>
-                            <div className="mt-auto text-center">
+                            <div className="mt-auto self-center text-center">
                                 <ScrollToContactButton>
                                     {t('cta')}
                                 </ScrollToContactButton>

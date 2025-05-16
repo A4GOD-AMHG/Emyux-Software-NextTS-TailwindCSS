@@ -36,7 +36,7 @@
             "3": "Immediate scalability",
             "4": "Your own dedicated development team, agile methodologies"
         },
-        "cta_contact": "Get Free Consultation",
+        "cta_contact": "Get Consultation",
         "stat_value": "94% of businesses",
         "stat_text": "improve in 30 days",
         "image_caption": "Tech that adapts to YOU"
@@ -265,7 +265,7 @@
         "title_part1": "Ready for",
         "title_highlight": "Digital Transformation",
         "title_part2": "?",
-        "subtext": "Schedule your free consultation today and discover how we can take your business to the next level",
+        "subtext": "Schedule your consultation today and discover how we can take your business to the next level",
         "cta": "Talk with an Expert",
         "features": {
             "1": "No obligations",
@@ -380,15 +380,16 @@
         "error": "Error loading calendar",
         "confirmation_title": "Appointment booked!",
         "confirmation_message": "Your appointment has been successfully scheduled.",
-        "close": "Close"
-    },
-    "Common": {
-        "locale": "en"
+        "close": "Close",
+        "loading_calendly": "Loading scheduling interface...",
+        "scheduling_complete": "Meeting scheduled successfully!",
+        "redirect_message": "Redirecting in 5 seconds..."
     },
     "ThankYouPage": {
         "title": "Thank You!",
         "message": "Your inquiry has been successfully scheduled. We will get in touch shortly.",
-        "button": "Visit Website"
+        "button": "Visit our Website",
+        "back_home": "Back to Home"
     },
     "Footer": {
         "contact": {

@@ -29,13 +29,12 @@ export default function ImprovedCTA() {
                 </p>
 
 
+                <div className="flex justify-center text-center">
                 <ScrollToContactButton>
                     {t('cta')}
                 </ScrollToContactButton>
+                </div>
 
-                {/* <button className="flex items-center justify-center gap-2 px-6 py-3 bg-yellow-400 text-indigo-900 font-semibold rounded-lg motion-scale-loop-[0.95] motion-duration-[1500ms] motion-ease-in-out">
-                        {t('cta')}
-                     </button> */}
 
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
                     {Object.values(features).map((item, i) => (

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {useRouter} from "@/i18n/navigation";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const createQuestionnaireSchema = (t: (key: string) => string) => z.object({
     q1: z.string().min(1, t('validation.question')),
@@ -18,6 +19,12 @@ const createQuestionnaireSchema = (t: (key: string) => string) => z.object({
     q8: z.string().min(1, t('validation.question')),
 });
 type QuizValues = z.infer<ReturnType<typeof createQuestionnaireSchema>>;
+
+const questionAnimation = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 }
+};
 
 export default function QuizForm() {
     const tQuiz = useTranslations('QuizForm');
@@ -54,51 +61,95 @@ export default function QuizForm() {
     if (!initialData) return <p>{tQuiz('loading')}…</p>;
 
     return (
-        <form
-            onSubmit={onSubmit}
-            className="max-w-7xl mx-auto px-4 py-12 space-y-6 overflow-y-auto scrollbar-hide sm:max-h-[40rem]"
-        >
-            <h2 className="text-3xl font-bold mb-4">{tQuiz('quiz_title')}</h2>
-            <div className="grid gap-6">
-                {tQuiz.raw('questions').map((q:{text:string;options:string[]}, i:number) => {
-                    const field = (`q${i+1}`) as keyof QuizValues;
-                    const value = watch(field);
-                    return (
-                        <fieldset key={i} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                            <legend className="font-semibold">{i+1}. {q.text}</legend>
-                            <div className="flex flex-wrap gap-3 mt-2">
-                                {q.options.map(opt => (
-                                    <button
-                                        key={opt}
-                                        type="button"
-                                        onClick={() => setValue(field, opt, { shouldValidate: true })}
-                                        className={`
-                      px-3 py-2 rounded-xl border font-medium transition
-                      ${value === opt
-                                            ? 'bg-purple-600 text-white border-purple-600'
-                                            : 'bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-700 hover:border-purple-600'
-                                        }
-                    `}
-                                    >{opt}</button>
-                                ))}
-                            </div>
-                            <input type="hidden" {...register(field)} />
-                        </fieldset>
-                    );
-                })}
-            </div>
-            <button
-                type="submit"
-                disabled={!isValid || isSubmitting}
-                className={`
-          w-full py-3 rounded-lg font-semibold transition
-          ${isValid
-                    ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                    : 'bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed'}
-        `}
+        <main className="flex-1 w-full">
+            <motion.form
+                onSubmit={onSubmit}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12"
             >
-                {isSubmitting ? tQuiz('submitting') : tQuiz('submit_quiz')}
-            </button>
-        </form>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-2xl sm:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                >
+                    {tQuiz('quiz_title')}
+                </motion.h2>
+
+                <div className="grid gap-6">
+                    <AnimatePresence>
+                        {tQuiz.raw('questions').map((q: { text: string; options: string[] }, i: number) => {
+                            const field = (`q${i + 1}`) as keyof QuizValues;
+                            const value = watch(field);
+                            return (
+                                <motion.div
+                                    key={i}
+                                    variants={questionAnimation}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700"
+                                >
+                                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                                        {i + 1}. {q.text}
+                                    </h3>
+
+                                    <div className="flex flex-wrap gap-3">
+                                        {q.options.map(opt => (
+                                            <button
+                                                key={opt}
+                                                type="button"
+                                                onClick={() => setValue(field, opt, { shouldValidate: true })}
+                                                className={`
+                                                    px-4 py-2 cursor-pointer rounded-lg border-2 font-medium 
+                                                    transition-colors duration-200 text-sm sm:text-base
+                                                    whitespace-normal text-left
+                                                    ${value === opt
+                                                    ? 'bg-purple-600 text-white border-purple-600'
+                                                    : 'bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:border-purple-500'
+                                                }
+                                                `}
+                                            >
+                                                {opt}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <input type="hidden" {...register(field)} />
+                                </motion.div>
+                            );
+                        })}
+                    </AnimatePresence>
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="mt-12 text-center"
+                >
+                    <button
+                        type="submit"
+                        disabled={!isValid || isSubmitting}
+                        className={`
+                            w-36 h-16 rounded-xl font-semibold 
+                            transition-all duration-300
+                            text-base sm:text-lg
+                            ${isValid
+                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white hover:shadow-lg'
+                            : 'bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed'}
+                        `}
+                    >
+                        {isSubmitting ? (
+                            <span className="flex items-center justify-center gap-2">
+                                <span className="w-2 h-2 bg-white rounded-full animate-bounce" />
+                                <span className="w-2 h-2 bg-white rounded-full animate-bounce delay-100" />
+                                <span className="w-2 h-2 bg-white rounded-full animate-bounce delay-200" />
+                            </span>
+                        ) : (
+                            tQuiz('submit_quiz')
+                        )}
+                    </button>
+                </motion.div>
+            </motion.form>
+        </main>
     );
 }

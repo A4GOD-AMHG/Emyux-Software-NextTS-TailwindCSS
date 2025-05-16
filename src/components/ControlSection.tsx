@@ -7,14 +7,12 @@ import ScrollToContactButton from './ScrollToContact';
 export default function ControlSection() {
     const t = useTranslations('ControlSection');
 
-    // Datos de enfoque
     const focusPoints = [
         { key: 'optimize', icon: '💡', title: t('optimize.title'), desc: t('optimize.desc') },
         { key: 'proactive', icon: '🔍', title: t('proactive.title'), desc: t('proactive.desc') },
         { key: 'innovate', icon: '🚀', title: t('innovate.title'), desc: t('innovate.desc') }
     ];
 
-    // Audiencia
     const audience = t.raw('isThisForYou');
 
     return (
@@ -94,7 +92,7 @@ export default function ControlSection() {
                     </motion.div>
                 </div>
 
-                <div className="text-center">
+                <div className="flex justify-center text-center">
                     <ScrollToContactButton>
                         {t('cta')}
                     </ScrollToContactButton>

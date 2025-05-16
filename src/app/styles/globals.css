@@ -8,11 +8,15 @@
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+    display: none !important;
+}
+
+html::-webkit-scrollbar {
+    display: none !important;
 }
 
 select {

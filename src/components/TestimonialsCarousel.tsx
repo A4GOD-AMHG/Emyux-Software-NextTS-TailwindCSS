@@ -49,7 +49,7 @@ export default function TestimonialsCarousel({ containerId }: TestimonialsCarous
     }, [containerId])
 
     return (
-        <div className="absolute inset-x-0 top-16 sm:top-15 mx-auto">
+        <div className="absolute inset-x-0 top-20 sm:top-15 mx-auto">
             <div className="flex justify-center z-50 gap-2">
                 {Array.from({ length: slideCount }).map((_, idx) => (
                     <button

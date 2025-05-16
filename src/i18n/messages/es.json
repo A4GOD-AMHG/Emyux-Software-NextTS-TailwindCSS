@@ -36,7 +36,7 @@
             "3": "Escalabilidad inmediata",
             "4": "Tu propio equipo de desarrollo dedicado, metodologías ágiles"
         },
-        "cta_contact": "Obtener asesoría gratuita",
+        "cta_contact": "Obtener asesoría",
         "stat_value": "94% de empresas",
         "stat_text": "mejoran en 30 días",
         "image_caption": "Software que se adapta a TI"
@@ -265,7 +265,7 @@
         "title_part1": "¿Listo para la",
         "title_highlight": "Transformación Digital",
         "title_part2": "?",
-        "subtext": "Agenda tu consultoría gratuita hoy mismo y descubre cómo podemos llevar tu negocio al siguiente nivel",
+        "subtext": "Agenda tu consultoría hoy mismo y descubre cómo podemos llevar tu negocio al siguiente nivel",
         "cta": "Hablar con un Experto",
         "features": {
             "1": "Sin compromisos",
@@ -380,15 +380,16 @@
         "error": "Error al cargar el calendario",
         "confirmation_title": "¡Cita agendada!",
         "confirmation_message": "Tu cita ha sido agendada con éxito.",
-        "close": "Cerrar"
-    },
-    "Common": {
-        "locale": "es"
+        "close": "Cerrar",
+        "loading_calendly": "Cargando el programador de citas...",
+        "scheduling_complete": "¡Cita programada con éxito!",
+        "redirect_message": "Serás redirigido en 5 segundos..."
     },
     "ThankYouPage": {
         "title": "¡Gracias!",
         "message": "Tu consulta ha sido agendada correctamente. Nos pondremos en contacto en breve.",
-        "button": "Visitar sitio web"
+        "button": "Visitar nuestro sitio web",
+        "back_home": "Volver al inicio"
     },
     "Footer": {
         "contact": {

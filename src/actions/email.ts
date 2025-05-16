@@ -1,6 +1,5 @@
 'use server';
 
-import ConfirmEmailTemplate from '@/components/emailTemplate';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
@@ -16,30 +15,12 @@ export async function addToAudience(name: string, email: string) {
         });
         console.log('[addToAudience] success', result);
         return result;
-    } catch (err: any) {
+    } catch (err) {
         console.error('[addToAudience] error', err);
-        throw err;
-    }
-}
 
-export async function sendAppointmentEmail(params: {
-    to: string;
-    name: string;
-    datetime: string;
-}) {
-    const { to, name, datetime } = params;
-    console.log('[sendAppointmentEmail] sending to', to);
-    try {
-        const mail = await resend.emails.send({
-            from: process.env.RESEND_FROM_EMAIL!,
-            to,
-            subject: `Tu cita está confirmada – ${datetime}`,
-            react: ConfirmEmailTemplate({ name, datetime }),
-        });
-        console.log('[sendAppointmentEmail] sent', mail);
-        return mail;
-    } catch (err: any) {
-        console.error('[sendAppointmentEmail] error', err);
-        throw err;
+        if (err instanceof Error) {
+            throw err;
+        }
+        throw new Error('Error desconocido al añadir a la audiencia');
     }
 }
