@@ -1,0 +1,412 @@
+{
+    "LocaleSwitcher": {
+        "label": "Cambiar idioma",
+        "locale": {
+            "en": "EN",
+            "es": "ES"
+        }
+    },
+    "ThemeSwitcher": {
+        "title": "Cambiar tema",
+        "aria": "Cambiar tema"
+    },
+    "RootLayout": {
+        "title": "Emyux Software - Soluciones Tecnológicas a Medida",
+        "description": "Desarrollo de software personalizado para empresas innovadoras",
+        "keywords": {
+            "1": "software personalizado",
+            "2": "desarrollo a medida",
+            "3": "aplicaciones empresariales"
+        }
+    },
+    "HeroSection": {
+        "title_solution_part1": "Software",
+        "title_solution_part2": "hecho a tu medida",
+        "generic_software_title": "Problemas comunes",
+        "generic_problems": {
+            "1": "¿Pagas por funciones que nunca usas?",
+            "2": "¿Atrapado en planes caros que no escalan contigo?",
+            "3": "¿Pierdes horas en trabajo manual repetitivo?",
+            "4": "¿Tu equipo sufre con sistemas incompletos?"
+        },
+        "our_solution_title": "Nuestras soluciones",
+        "our_solutions": {
+            "1": "Solo pagas por lo que necesitas, adaptado a tus necesidades",
+            "2": "Automatización que reduce tu tiempo operativo",
+            "3": "Escalabilidad inmediata",
+            "4": "Tu propio equipo de desarrollo dedicado, metodologías ágiles"
+        },
+        "cta_contact": "Obtener asesoría gratuita",
+        "stat_value": "94% de empresas",
+        "stat_text": "mejoran en 30 días",
+        "image_caption": "Software que se adapta a TI"
+    },
+    "ProblemsSection": {
+        "title": "¿Tu sistema limita el crecimiento de tu empresa?",
+        "subtext1": "Tal vez estés confiando en una solución que no se adapta a tus procesos.",
+        "subtext2": "Un software estandarizado puede funcionar al principio, pero acaba generando cuellos de botella y gastos innecesarios.",
+        "highlight": "Rescatamos y optimizamos tus sistemas para que tu inversión rinda al máximo.",
+        "problems": {
+            "1": {
+                "title": "Ineficiencias Operativas",
+                "desc": "Automatizamos procesos repetitivos para ahorrar tiempo y costos."
+            },
+            "2": {
+                "title": "Falta de Integración",
+                "desc": "Centralizamos herramientas y sistemas para optimizar el flujo de información."
+            },
+            "3": {
+                "title": "Procesos Desactualizados",
+                "desc": "Modernizamos tu infraestructura con soluciones adaptadas a tus necesidades."
+            },
+            "4": {
+                "title": "Soporte Insuficiente",
+                "desc": "Aseguramos el rendimiento con monitoreo y actualizaciones continuas."
+            }
+        }
+    },
+    "AdvantagesSection": {
+        "title_system": "Ventajas de un sistema personalizado",
+        "system": {
+            "efficiency": {
+                "subtitle": "MEJORA DE LA EFICIENCIA",
+                "desc": "Un proyecto tecnológico que funciona correctamente mejora la eficiencia empresarial."
+            },
+            "quality": {
+                "subtitle": "MEJORA DE LA CALIDAD",
+                "desc": "Cumple con los requisitos y expectativas del cliente, evitando la pérdida de clientes y oportunidades de ingresos."
+            },
+            "problems": {
+                "subtitle": "IDENTIFICACIÓN TEMPRANA DE PROBLEMAS",
+                "desc": "Evita costosos errores o retrasos en el futuro."
+            },
+            "costs": {
+                "subtitle": "REDUCCIÓN DE COSTOS",
+                "desc": "Reduce los costos asociados con proyectos fallidos y la pérdida de oportunidades comerciales."
+            },
+            "maintenance": {
+                "subtitle": "REDUCCIÓN DE COSTOS DE MANTENIMIENTO",
+                "desc": "Garantiza el funcionamiento constante de los proyectos tecnológicos."
+            },
+            "lifetime": {
+                "subtitle": "ACTUALIZACIONES QUE EXTIENDEN LA VIDA ÚTIL DEL SISTEMA",
+                "desc": "Mejoras y correcciones que prolongan la utilidad del proyecto."
+            }
+        },
+        "title_ai": "Multiplica la eficiencia de tu empresa con IA",
+        "ai": {
+            "speed": {
+                "title": "VELOCIDAD",
+                "desc": "La IA te permite aumentar la agilidad de los procesos y sistemas de tu empresa."
+            },
+            "efficiency": {
+                "title": "EFICIENCIA",
+                "desc": "Con la IA puedes obtener mejores resultados en menos tiempo y esfuerzo."
+            },
+            "communication": {
+                "title": "COMUNICACIÓN",
+                "desc": "La gestión de la información se realiza en tiempo real, sin demoras ni esperas."
+            },
+            "security": {
+                "title": "SEGURIDAD",
+                "desc": "Evita los errores humanos y mantiene protegida tu información sensible."
+            }
+        },
+        "cta_contact": "Contáctanos"
+    },
+    "ServicesSection": {
+        "title_part1": "No Vendemos Código,",
+        "title_part2": "Vendemos Resultados",
+        "subtitle": "Cada línea de código está orientada a generar valor tangible para tu negocio",
+        "cta": "Contactar",
+        "services": {
+            "1": {
+                "title": "Software que Genera Resultados",
+                "description": "No vendemos código, vendemos soluciones que aumentan tus ingresos y reducen costos. Sistemas diseñados exclusivamente para hacer crecer TU negocio.",
+                "benefits": {
+                    "1": "+30% eficiencia",
+                    "2": "ROI medible",
+                    "3": "Escalable"
+                }
+            },
+            "2": {
+                "title": "Automatización que Transforma",
+                "description": "Elimina el trabajo repetitivo de tu equipo con sistemas inteligentes que trabajan 24/7 sin errores. Recupera hasta 15 horas semanales por empleado.",
+                "benefits": {
+                    "1": "0 errores humanos",
+                    "2": "Procesos 5x más rápidos",
+                    "3": "Integración inmediata"
+                }
+            },
+            "3": {
+                "title": "Sistemas que Impulsan",
+                "description": "ERP/CRM que realmente se adaptan a tus procesos. Olvídate de sistemas genéricos que no cumplen. Control total sobre cada aspecto de tu operación.",
+                "benefits": {
+                    "1": "Ventas +40%",
+                    "2": "Clientes satisfechos",
+                    "3": "Toma decisiones con datos"
+                }
+            }
+        }
+    },
+    "ControlSection": {
+        "heading": "El éxito de todo negocio se mide por los procesos que puedes controlar",
+        "subheading": "para actuar a tiempo de que ocurra un desastre y tomes mejores decisiones que te permitan crecer.",
+        "optimize": {
+            "title": "Optimiza tu inversión",
+            "desc": "Deja de malgastar recursos con soluciones ineficientes y poco seguras que no cumplen con las necesidades de tu empresa."
+        },
+        "proactive": {
+            "title": "Resolución proactiva de problemas",
+            "desc": "Detecta y resuelve problemas antes de que afecten tu negocio mediante monitoreo constante y en tiempo real."
+        },
+        "innovate": {
+            "title": "Lidera con innovación",
+            "desc": "Mantente al frente del mercado ofreciendo soluciones tecnológicas avanzadas y efectivas que satisfagan a tus clientes."
+        },
+        "isThisForYou": {
+            "title": "📢 ¿Esto es para ti?",
+            "noTitle": "No es para ti si…",
+            "yesTitle": "Pero es perfecto para ti si…",
+            "no": [
+                "Solo buscas una solución rápida o “de mientras”.",
+                "Quieres copiar el sistema de otra empresa sin considerar lo que tu negocio realmente necesita.",
+                "No estás listo para invertir en eficiencia, control y crecimiento real.",
+                "Prefieres seguir con Excel, papel y caos… aunque eso te cueste tiempo y dinero.",
+                "Quieres seguir resolviendo problemas “cuando salten”."
+            ],
+            "yes": [
+                "Quieres evitar errores que te hacen perder dinero cada semana.",
+                "Estás cansado de perder tiempo valioso en tareas repetitivas o mal ejecutadas.",
+                "Necesitas un sistema que se adapte a tus procesos reales, no al revés.",
+                "Te interesa tener todo centralizado, medible y bajo control.",
+                "Estás listo para tomar decisiones con datos, no con corazonadas."
+            ]
+        },
+        "cta": "Contáctanos"
+    },
+    "TimelineSection": {
+        "heading": "Y así lo hacemos:",
+        "steps": [
+            {
+                "key": "step1",
+                "number": "1",
+                "title": "IDENTIFICACIÓN DE PROBLEMAS Y NECESIDADES",
+                "desc": "Analizamos tus procesos para detectar áreas de mejora y necesidades clave."
+            },
+            {
+                "key": "step2",
+                "number": "2",
+                "title": "PROPUESTA TÉCNICA Y ECONÓMICA",
+                "desc": "Diseñamos una solución personalizada, detallando tiempos, costos y funcionalidades."
+            },
+            {
+                "key": "step3",
+                "number": "3",
+                "title": "DISEÑO Y DESARROLLO ÁGIL",
+                "desc": "Creamos prototipos funcionales y desarrollamos el sistema por etapas."
+            },
+            {
+                "key": "step4",
+                "number": "4",
+                "title": "PRUEBAS Y CALIDAD GARANTIZADA",
+                "desc": "Validamos el sistema para asegurarnos que funcione correctamente."
+            },
+            {
+                "key": "step5",
+                "number": "5",
+                "title": "IMPLEMENTACIÓN Y CAPACITACIÓN",
+                "desc": "Instalamos tu sistema y capacitamos a tu equipo."
+            },
+            {
+                "key": "step6",
+                "number": "6",
+                "title": "SEGUIMIENTO Y GARANTÍA",
+                "desc": "Siempre estaremos contigo para garantizar el mejor funcionamiento."
+            }
+        ]
+    },
+    "TestimonialsSection": {
+        "title": "Lo que dicen nuestros clientes",
+        "testimonials": {
+            "1": {
+                "quote": "Lo mejor de Jose sin duda es la atención. Las automatizaciones es un mundo complejo, tener a alguien que ante cualquier error ese mismo día se pone a solventarlo...",
+                "name": "Niall Wilde",
+                "role": "CEO Estrategias.io",
+                "avatar": "/images/testimonials/testimonial1.avif"
+            },
+            "2": {
+                "quote": "José y el equipo de Emyux realizan un trabajo fantástico. Están siempre detrás de mi proyecto proponiendo cosas nuevas para escalar.",
+                "name": "Vicente Montes",
+                "role": "CEO ReseteaT",
+                "avatar": "/images/testimonials/testimonial2.avif"
+            },
+            "3": {
+                "quote": "Muy satisfecho con su servicio. Cumplieron todas mis expectativas y gracias a ellos estoy llevando de una forma mas ordenada mi negocio",
+                "name": "Ruscarparts",
+                "role": "Dueño de negocio",
+                "avatar": "/images/testimonials/testimonial3.avif"
+            },
+            "4": {
+                "quote": "Fantástico trabajo. José y el equipo de Emyux fueron muy atentos y precisos con mis tareas de automatización contables...",
+                "name": "Jesús Sepúlveda",
+                "role": "Agente Inmobiliario",
+                "avatar": "/images/testimonials/testimonial4.avif"
+            },
+            "5": {
+                "quote": "Estoy muy satisfecho con el servicio de Emyux. Automatizaron toda mi atención al cliente (lo cual me robaba mucho tiempo)...",
+                "name": "Fco Javier Templado",
+                "role": "CEO Escuela Javier T",
+                "avatar": "/images/testimonials/testimonial5.avif"
+            }
+        }
+    },
+    "ImprovedCTA": {
+        "title_part1": "¿Listo para la",
+        "title_highlight": "Transformación Digital",
+        "title_part2": "?",
+        "subtext": "Agenda tu consultoría gratuita hoy mismo y descubre cómo podemos llevar tu negocio al siguiente nivel",
+        "cta": "Hablar con un Experto",
+        "features": {
+            "1": "Sin compromisos",
+            "2": "Análisis personalizado",
+            "3": "Propuesta en 48h",
+            "4": "Garantía de satisfacción"
+        }
+    },
+    "ContactSection": {
+        "title": "Introduce tus datos",
+        "next": "Siguiente",
+        "labels": {
+            "name": "Nombre completo",
+            "email": "Correo electrónico",
+            "phone": "Número de teléfono"
+        },
+        "placeholders": {
+            "phone": "+34 600 123 456"
+        },
+        "validation": {
+            "name": "El nombre debe tener al menos 2 caracteres",
+            "email": "Ingresa un correo electrónico válido",
+            "phone": "Ingresa un número de teléfono válido"
+        }
+    },
+    "QuizForm": {
+       "quiz_title": "Queremos saber si eres el tipo de cliente que deseamos",
+       "submit_quiz": "Programar cita ahora",
+       "submitting": "Enviando...",
+       "loading": "Cargando",
+       "validation": {
+            "question": "Debes seleccionar una opción",
+            "required": "Debes completar todas las preguntas"
+            },
+            "questions": [
+                {
+                    "text": "¿Te gustaría recibir un reporte diario por correo o WhatsApp con la información clave y las operaciones críticas de tu empresa para tomar decisiones más rápido?",
+                    "options": [
+                        "Correo",
+                        "WhatsApp",
+                        "No"
+                    ]
+                },
+                {
+                    "text": "¿Qué procesos de tu empresa actualmente requieren más tiempo o te generan dolores de cabeza?",
+                    "options": [
+                        "Contabilidad",
+                        "Ventas",
+                        "Logística",
+                        "Atención al cliente",
+                        "Otro"
+                    ]
+                },
+                {
+                    "text": "¿Tu empresa ya utiliza algún sistema o software para gestionar sus operaciones?",
+                    "options": [
+                        "Sí",
+                        "No"
+                    ]
+                },
+                {
+                    "text": "¿Qué nivel de automatización te gustaría alcanzar en tu empresa?",
+                    "options": [
+                        "Básico",
+                        "Intermedio",
+                        "Avanzado",
+                        "Total"
+                    ]
+                },
+                {
+                    "text": "¿Cuál es tu objetivo principal al buscar una solución de software a la medida?",
+                    "options": [
+                        "Aumentar ventas",
+                        "Reducir costos",
+                        "Mejorar procesos",
+                        "Otro"
+                    ]
+                },
+                {
+                    "text": "¿Cuál es el giro principal de tu empresa?",
+                    "options": [
+                        "Industria",
+                        "Servicios",
+                        "Comercio",
+                        "Tecnología",
+                        "Otro"
+                    ]
+                },
+                {
+                    "text": "¿Cuál es el presupuesto estimado que tu empresa podría invertir en una solución tecnológica personalizada?",
+                    "options": [
+                        "< 5k €",
+                        "5k–15k €",
+                        "15k–30k €",
+                        "> 30k €"
+                    ]
+                },
+                {
+                    "text": "¿Qué tan pronto estás interesado(a) en iniciar este proyecto?",
+                    "options": [
+                        "Inmediato",
+                        "1–2 meses",
+                        "3–6 meses",
+                        "Flexible"
+                    ]
+                }
+            ]
+     },
+    "CalendlyPage": {
+        "title": "Programa tu reunión",
+        "loading_message": "Cargando calendario de citas...",
+        "error": "Error al cargar el calendario",
+        "confirmation_title": "¡Cita agendada!",
+        "confirmation_message": "Tu cita ha sido agendada con éxito.",
+        "close": "Cerrar"
+    },
+    "Common": {
+        "locale": "es"
+    },
+    "ThankYouPage": {
+        "title": "¡Gracias!",
+        "message": "Tu consulta ha sido agendada correctamente. Nos pondremos en contacto en breve.",
+        "button": "Visitar sitio web"
+    },
+    "Footer": {
+        "contact": {
+            "title": "Contacto",
+            "phone": "Teléfono"
+        },
+        "legal": {
+            "title": "Legal",
+            "privacy": "Política de Privacidad",
+            "terms": "Términos de Servicio",
+            "cookies": "Política de Cookies"
+        },
+        "quote": {
+            "quote": "Transformamos problemas complejos en soluciones elegantes, un algoritmo a la vez",
+            "title": "Innovación Constante",
+            "subtitle": "Automatizando tu futuro digital"
+        },
+        "copyright": "Todos los derechos reservados",
+        "locale": "es"
+    }
+}

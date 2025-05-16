@@ -1,0 +1,412 @@
+{
+    "LocaleSwitcher": {
+        "label": "Change LocaleSwitcher",
+        "locale": {
+            "en": "EN",
+            "es": "ES"
+        }
+    },
+    "ThemeSwitcher": {
+        "title": "Toggle theme",
+        "aria": "Toggle theme"
+    },
+    "RootLayout": {
+        "title": "Emyux Software - Soluciones Tecnológicas a Medida",
+        "description": "Desarrollo de software personalizado para empresas innovadoras",
+        "keywords": {
+            "1": "software personalizado",
+            "2": "desarrollo a medida",
+            "3": "aplicaciones empresariales"
+        }
+    },
+    "HeroSection": {
+        "title_solution_part1": "Business software",
+        "title_solution_part2": "made for you",
+        "generic_software_title": "Common issues",
+        "generic_problems": {
+            "1": "Are you paying for features you never use?",
+            "2": "Stuck on expensive planes that don't scale with you?",
+            "3": "Are you wasting hours on repetitive manual work?",
+            "4": "Is your team suffering from incomplete systems?"
+        },
+        "our_solution_title": "Our solutions",
+        "our_solutions": {
+            "1": "You only pay for what you need, tailored to your needs",
+            "2": "Automation that reduces your operational time",
+            "3": "Immediate scalability",
+            "4": "Your own dedicated development team, agile methodologies"
+        },
+        "cta_contact": "Get Free Consultation",
+        "stat_value": "94% of businesses",
+        "stat_text": "improve in 30 days",
+        "image_caption": "Tech that adapts to YOU"
+    },
+    "ProblemsSection": {
+        "title": "Does your system limit your company's growth?",
+        "subtext1": "You might be relying on a solution that doesn't fit your processes.",
+        "subtext2": "Standardized software might work at first, but ends up creating bottlenecks and unnecessary expenses.",
+        "highlight": "We rescue and optimize your systems to maximize your investment return.",
+        "problems": {
+            "1": {
+                "title": "Operational Inefficiencies",
+                "desc": "We automate repetitive processes to save time and costs."
+            },
+            "2": {
+                "title": "Lack of Integration",
+                "desc": "We centralize tools and systems to optimize information flow."
+            },
+            "3": {
+                "title": "Outdated Processes",
+                "desc": "We modernize your infrastructure with tailored solutions."
+            },
+            "4": {
+                "title": "Insufficient Support",
+                "desc": "We ensure performance with continuous monitoring and updates."
+            }
+        }
+    },
+    "AdvantagesSection": {
+        "title_system": "Advantages of a Custom System",
+        "system": {
+            "efficiency": {
+                "subtitle": "EFFICIENCY IMPROVEMENT",
+                "desc": "A well-functioning tech project boosts business efficiency."
+            },
+            "quality": {
+                "subtitle": "QUALITY IMPROVEMENT",
+                "desc": "Meets client requirements and expectations, avoiding customer loss and revenue gaps."
+            },
+            "problems": {
+                "subtitle": "EARLY PROBLEM IDENTIFICATION",
+                "desc": "Prevents costly mistakes or delays down the line."
+            },
+            "costs": {
+                "subtitle": "COST REDUCTION",
+                "desc": "Lowers expenses from failed projects and missed business opportunities."
+            },
+            "maintenance": {
+                "subtitle": "MAINTENANCE COST REDUCTION",
+                "desc": "Ensures continuous operation of your tech initiatives."
+            },
+            "lifetime": {
+                "subtitle": "UPDATES THAT EXTEND SYSTEM LIFESPAN",
+                "desc": "Improvements and fixes that prolong the project's usefulness."
+            }
+        },
+        "title_ai": "Multiply Your Company's Efficiency with AI",
+        "ai": {
+            "speed": {
+                "title": "SPEED",
+                "desc": "AI allows you to boost agility in your company's processes and systems."
+            },
+            "efficiency": {
+                "title": "EFFICIENCY",
+                "desc": "With AI, you can achieve better results in less time and effort."
+            },
+            "communication": {
+                "title": "COMMUNICATION",
+                "desc": "Information management happens in real time, without delays or waits."
+            },
+            "security": {
+                "title": "SECURITY",
+                "desc": "Prevents human errors and keeps your sensitive information safe."
+            }
+        },
+        "cta_contact": "Contact Us"
+    },
+    "ServicesSection": {
+        "title_part1": "We Don't Sell Code,",
+        "title_part2": "We Sell Results",
+        "subtitle": "Every line of code is designed to generate tangible value for your business",
+        "cta": "Contact",
+        "services": {
+            "1": {
+                "title": "Results-Driven Software",
+                "description": "We don't sell code, we sell solutions that increase your revenue and reduce costs. Systems designed exclusively to grow YOUR business.",
+                "benefits": {
+                    "1": "+30% efficiency",
+                    "2": "Measurable ROI",
+                    "3": "Scalable"
+                }
+            },
+            "2": {
+                "title": "Transformative Automation",
+                "description": "Eliminate repetitive work from your team with intelligent systems that work 24/7 error-free. Recover up to 15 weekly hours per employee.",
+                "benefits": {
+                    "1": "0 human errors",
+                    "2": "5x faster processes",
+                    "3": "Immediate integration"
+                }
+            },
+            "3": {
+                "title": "Empowering Systems",
+                "description": "ERP/CRM that truly adapt to your processes. Forget generic systems that don't deliver. Full control over every aspect of your operation.",
+                "benefits": {
+                    "1": "+40% sales",
+                    "2": "Satisfied customers",
+                    "3": "Data-driven decisions"
+                }
+            }
+        }
+    },
+    "ControlSection": {
+        "heading": "The success of any business is measured by the processes you can control",
+        "subheading": "so you can act in time before a disaster strikes and make better decisions that help you grow.",
+        "optimize": {
+            "title": "Optimize Your Investment",
+            "desc": "Stop wasting resources on inefficient and insecure solutions that don’t meet your company’s needs."
+        },
+        "proactive": {
+            "title": "Proactive Problem Resolution",
+            "desc": "Detect and resolve issues before they impact your business through constant, real-time monitoring."
+        },
+        "innovate": {
+            "title": "Lead with Innovation",
+            "desc": "Stay ahead of the market by delivering advanced, effective tech solutions that delight your customers."
+        },
+        "isThisForYou": {
+            "title": "📢 Is this for you?",
+            "noTitle": "It’s not for you if…",
+            "yesTitle": "But it’s perfect for you if…",
+            "no": [
+                "You only want a quick or “temporary” fix.",
+                "You plan to copy another company’s system without considering your business’s real needs.",
+                "You’re not ready to invest in efficiency, control, and real growth.",
+                "You prefer to stick with Excel, paper, and chaos… even if it costs you time and money.",
+                "You want to keep solving problems “as they pop up.”"
+            ],
+            "yes": [
+                "You want to avoid mistakes that cost you money each week.",
+                "You’re tired of wasting valuable time on repetitive or poorly executed tasks.",
+                "You need a system that adapts to your real processes, not the other way around.",
+                "You want everything centralized, measurable, and under control.",
+                "You’re ready to make data-driven decisions, not guesses."
+            ]
+        },
+        "cta": "Contact Us"
+    },
+    "TimelineSection": {
+        "heading": "Here's how we do it:",
+        "steps": [
+            {
+                "key": "step1",
+                "number": "1",
+                "title": "PROBLEM & NEEDS IDENTIFICATION",
+                "desc": "We analyze your processes to detect improvement areas and key needs."
+            },
+            {
+                "key": "step2",
+                "number": "2",
+                "title": "TECHNICAL & ECONOMIC PROPOSAL",
+                "desc": "We design a tailored solution, detailing timelines, costs, and features."
+            },
+            {
+                "key": "step3",
+                "number": "3",
+                "title": "AGILE DESIGN & DEVELOPMENT",
+                "desc": "We build functional prototypes and develop the system in stages."
+            },
+            {
+                "key": "step4",
+                "number": "4",
+                "title": "TESTING & QUALITY ASSURANCE",
+                "desc": "We validate the system to ensure it works flawlessly."
+            },
+            {
+                "key": "step5",
+                "number": "5",
+                "title": "IMPLEMENTATION & TRAINING",
+                "desc": "We deploy your system and train your team."
+            },
+            {
+                "key": "step6",
+                "number": "6",
+                "title": "FOLLOW-UP & WARRANTY",
+                "desc": "We're always by your side to guarantee optimal performance."
+            }
+        ]
+    },
+    "TestimonialsSection": {
+        "title": "What our clients say",
+        "testimonials": {
+            "1": {
+                "quote": "The best thing about Jose is undoubtedly his attention. Automations are a complex world, and having someone who solves any error the same day...",
+                "name": "Niall Wilde",
+                "role": "CEO Estrategias.io",
+                "avatar": "/images/testimonials/testimonial1.avif"
+            },
+            "2": {
+                "quote": "José and the Emyux team do fantastic work. They're always behind my project proposing new things to scale.",
+                "name": "Vicente Montes",
+                "role": "CEO ReseteaT",
+                "avatar": "/images/testimonials/testimonial2.avif"
+            },
+            "3": {
+                "quote": "Very satisfied with their service. They met all my expectations and thanks to them I'm running my business in a more organized way.",
+                "name": "Ruscarparts",
+                "role": "Business Owner",
+                "avatar": "/images/testimonials/testimonial3.avif"
+            },
+            "4": {
+                "quote": "Fantastic work. José and the Emyux team were very attentive and precise with my accounting automation tasks...",
+                "name": "Jesús Sepúlveda",
+                "role": "Real Estate Agent",
+                "avatar": "/images/testimonials/testimonial4.avif"
+            },
+            "5": {
+                "quote": "I'm very satisfied with Emyux's service. They automated all my customer service (which was taking up too much of my time)...",
+                "name": "Fco Javier Templado",
+                "role": "CEO Javier T School",
+                "avatar": "/images/testimonials/testimonial5.avif"
+            }
+        }
+    },
+    "ImprovedCTA": {
+        "title_part1": "Ready for",
+        "title_highlight": "Digital Transformation",
+        "title_part2": "?",
+        "subtext": "Schedule your free consultation today and discover how we can take your business to the next level",
+        "cta": "Talk with an Expert",
+        "features": {
+            "1": "No obligations",
+            "2": "Personalized analysis",
+            "3": "Proposal in 48h",
+            "4": "Satisfaction guarantee"
+        }
+    },
+    "ContactSection": {
+        "title": "Enter your details",
+        "next": "Next",
+        "labels": {
+            "name": "Full name",
+            "email": "Email address",
+            "phone": "Phone number"
+        },
+        "placeholders": {
+            "phone": "+1 555 123 4567"
+        },
+        "validation": {
+            "name": "Name must be at least 2 characters",
+            "email": "Please enter a valid email address",
+            "phone": "Please enter a valid phone number"
+        }
+    },
+    "QuizForm": {
+        "quiz_title": "We want to know if you’re the kind of client we’re looking for",
+        "submit_quiz": "Schedule meeting now",
+        "submitting": "Submitting...",
+        "loading": "Loading",
+        "validation": {
+            "question": "You must select an option",
+            "required": "You must complete all questions"
+        },
+        "questions": [
+            {
+                "text": "Would you like to receive a daily report via email or WhatsApp with key information and critical operations of your company to make faster decisions?",
+                "options": [
+                    "Email",
+                    "WhatsApp",
+                    "No"
+                ]
+            },
+            {
+                "text": "Which processes in your company currently take the most time or give you headaches?",
+                "options": [
+                    "Accounting",
+                    "Sales",
+                    "Logistics",
+                    "Customer Support",
+                    "Other"
+                ]
+            },
+            {
+                "text": "Does your company already use any system or software to manage its operations?",
+                "options": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            {
+                "text": "What level of automation would you like to achieve in your company?",
+                "options": [
+                    "Basic",
+                    "Intermediate",
+                    "Advanced",
+                    "Full"
+                ]
+            },
+            {
+                "text": "What is your main goal in seeking a bespoke software solution?",
+                "options": [
+                    "Increase sales",
+                    "Reduce costs",
+                    "Improve processes",
+                    "Other"
+                ]
+            },
+            {
+                "text": "What is your company's main industry?",
+                "options": [
+                    "Manufacturing",
+                    "Services",
+                    "Retail",
+                    "Technology",
+                    "Other"
+                ]
+            },
+            {
+                "text": "What is the estimated budget your company could invest in a custom technology solution?",
+                "options": [
+                    "< $5k",
+                    "$5k–$15k",
+                    "$15k–$30k",
+                    "> $30k"
+                ]
+            },
+            {
+                "text": "How soon are you interested in starting this project?",
+                "options": [
+                    "Immediate",
+                    "1–2 months",
+                    "3–6 months",
+                    "Flexible"
+                ]
+            }
+        ]
+    },
+    "CalendlyPage": {
+        "title": "Schedule Your Meeting",
+        "loading_message": "Loading scheduling calendar...",
+        "error": "Error loading calendar",
+        "confirmation_title": "Appointment booked!",
+        "confirmation_message": "Your appointment has been successfully scheduled.",
+        "close": "Close"
+    },
+    "Common": {
+        "locale": "en"
+    },
+    "ThankYouPage": {
+        "title": "Thank You!",
+        "message": "Your inquiry has been successfully scheduled. We will get in touch shortly.",
+        "button": "Visit Website"
+    },
+    "Footer": {
+        "contact": {
+            "title": "Contact Us",
+            "phone": "Phone"
+        },
+        "legal": {
+            "title": "Legal",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "cookies": "Cookies Policy"
+        },
+        "quote": {
+            "quote": "We transform complex problems into elegant solutions, one algorithm at a time",
+            "title": "Innovation Driven",
+            "subtitle": "Automating your digital future"
+        },
+        "copyright": "All rights reserved",
+        "locale": "en"
+    }
+}

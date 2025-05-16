@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "tailwindcss-motion";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-broken-gray: #F2F0EF;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
