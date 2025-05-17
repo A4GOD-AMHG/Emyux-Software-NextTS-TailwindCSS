@@ -292,88 +292,88 @@
         }
     },
     "QuizForm": {
-       "quiz_title": "Queremos saber si eres el tipo de cliente que deseamos",
-       "submit_quiz": "Programar cita ahora",
-       "submitting": "Enviando...",
-       "loading": "Cargando",
-       "validation": {
+        "quiz_title": "Queremos saber si eres el tipo de cliente que deseamos",
+        "submit_quiz": "Programar cita ahora",
+        "submitting": "Enviando...",
+        "loading": "Cargando",
+        "validation": {
             "question": "Debes seleccionar una opción",
             "required": "Debes completar todas las preguntas"
+        },
+        "questions": [
+            {
+                "text": "¿Te gustaría recibir un reporte diario por correo o WhatsApp con la información clave y las operaciones críticas de tu empresa para tomar decisiones más rápido?",
+                "options": [
+                    "Correo",
+                    "WhatsApp",
+                    "No"
+                ]
             },
-            "questions": [
-                {
-                    "text": "¿Te gustaría recibir un reporte diario por correo o WhatsApp con la información clave y las operaciones críticas de tu empresa para tomar decisiones más rápido?",
-                    "options": [
-                        "Correo",
-                        "WhatsApp",
-                        "No"
-                    ]
-                },
-                {
-                    "text": "¿Qué procesos de tu empresa actualmente requieren más tiempo o te generan dolores de cabeza?",
-                    "options": [
-                        "Contabilidad",
-                        "Ventas",
-                        "Logística",
-                        "Atención al cliente",
-                        "Otro"
-                    ]
-                },
-                {
-                    "text": "¿Tu empresa ya utiliza algún sistema o software para gestionar sus operaciones?",
-                    "options": [
-                        "Sí",
-                        "No"
-                    ]
-                },
-                {
-                    "text": "¿Qué nivel de automatización te gustaría alcanzar en tu empresa?",
-                    "options": [
-                        "Básico",
-                        "Intermedio",
-                        "Avanzado",
-                        "Total"
-                    ]
-                },
-                {
-                    "text": "¿Cuál es tu objetivo principal al buscar una solución de software a la medida?",
-                    "options": [
-                        "Aumentar ventas",
-                        "Reducir costos",
-                        "Mejorar procesos",
-                        "Otro"
-                    ]
-                },
-                {
-                    "text": "¿Cuál es el giro principal de tu empresa?",
-                    "options": [
-                        "Industria",
-                        "Servicios",
-                        "Comercio",
-                        "Tecnología",
-                        "Otro"
-                    ]
-                },
-                {
-                    "text": "¿Cuál es el presupuesto estimado que tu empresa podría invertir en una solución tecnológica personalizada?",
-                    "options": [
-                        "< 5k €",
-                        "5k–15k €",
-                        "15k–30k €",
-                        "> 30k €"
-                    ]
-                },
-                {
-                    "text": "¿Qué tan pronto estás interesado(a) en iniciar este proyecto?",
-                    "options": [
-                        "Inmediato",
-                        "1–2 meses",
-                        "3–6 meses",
-                        "Flexible"
-                    ]
-                }
-            ]
-     },
+            {
+                "text": "¿Qué procesos de tu empresa actualmente requieren más tiempo o te generan dolores de cabeza?",
+                "options": [
+                    "Contabilidad",
+                    "Ventas",
+                    "Logística",
+                    "Atención al cliente",
+                    "Otro"
+                ]
+            },
+            {
+                "text": "¿Tu empresa ya utiliza algún sistema o software para gestionar sus operaciones?",
+                "options": [
+                    "Sí",
+                    "No"
+                ]
+            },
+            {
+                "text": "¿Qué nivel de automatización te gustaría alcanzar en tu empresa?",
+                "options": [
+                    "Básico",
+                    "Intermedio",
+                    "Avanzado",
+                    "Total"
+                ]
+            },
+            {
+                "text": "¿Cuál es tu objetivo principal al buscar una solución de software a la medida?",
+                "options": [
+                    "Aumentar ventas",
+                    "Reducir costos",
+                    "Mejorar procesos",
+                    "Otro"
+                ]
+            },
+            {
+                "text": "¿Cuál es el giro principal de tu empresa?",
+                "options": [
+                    "Industria",
+                    "Servicios",
+                    "Comercio",
+                    "Tecnología",
+                    "Otro"
+                ]
+            },
+            {
+                "text": "¿Cuál es el presupuesto estimado que tu empresa podría invertir en una solución tecnológica personalizada?",
+                "options": [
+                    "< 5k €",
+                    "5k–15k €",
+                    "15k–30k €",
+                    "> 30k €"
+                ]
+            },
+            {
+                "text": "¿Qué tan pronto estás interesado(a) en iniciar este proyecto?",
+                "options": [
+                    "Inmediato",
+                    "1–2 meses",
+                    "3–6 meses",
+                    "Flexible"
+                ]
+            }
+        ]
+    },
     "CalendlyPage": {
         "title": "Programa tu reunión",
         "loading_message": "Cargando calendario de citas...",
@@ -387,9 +387,8 @@
     },
     "ThankYouPage": {
         "title": "¡Gracias!",
-        "message": "Tu consulta ha sido agendada correctamente. Nos pondremos en contacto en breve.",
-        "button": "Visitar nuestro sitio web",
-        "back_home": "Volver al inicio"
+        "message": "Si estás muy interesado y tienes capital para invertir, contáctanos enseguida por WhatsApp para agendar una cita cuanto antes.",
+        "contact_button": "Contactar por WhatsApp"
     },
     "Footer": {
         "contact": {

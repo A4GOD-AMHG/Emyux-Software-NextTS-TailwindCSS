@@ -387,9 +387,8 @@
     },
     "ThankYouPage": {
         "title": "Thank You!",
-        "message": "Your inquiry has been successfully scheduled. We will get in touch shortly.",
-        "button": "Visit our Website",
-        "back_home": "Back to Home"
+        "message": "If you're very interested and have capital to invest, contact us immediately via WhatsApp to schedule an appointment as soon as possible.",
+        "contact_button": "Contact via WhatsApp"
     },
     "Footer": {
         "contact": {
